@@ -1,52 +1,50 @@
 body {
   margin: 0;
   padding: 0;
- background-color: rgb(18, 18, 18);
-}
-
-header{
-    background-image: url("images/banner1.PNG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-.header{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 550px;
-    padding: 20px 40px; 
-
-}
-.header img{
-    width: 150px;
-    position: relative;
-    bottom: 60px;
-
+  background-color:rgb(10, 5, 5);
 }
 .nav-links{
-    display:flex;
-    list-style: none;
-    gap: 38px;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  margin-top: 20px;
 
-   
 }
-li{
-    font-size: 20px;
-    
+.nav-right {
+display: flex;
+align-items: center;
+}
+
+.nav-left{
+    display: flex;
+
+}
+.nav-links ul{
+  list-style: none;
+  display: flex;
+  font-size: 20px;
+  gap: 35px;
+}
+
+.banner{
+  width: 100%;
+  transition: opacity 0.8s ease-in-out;
+  margin-top: 30px;
+
 }
 .login{
-      font-size: 20px;
-      text-decoration: none;
-      color: white;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
 }
 
-header li + li::before{
-    content: "> ";
+/* header li + li::before{
+    content: " > ";
     margin: 0 7px;
   
-}
+} */
 .menu-toggle{
     display: none;
 }
@@ -57,16 +55,15 @@ h1{
     color: white;
 }
 button{
-    font-size: 30px;
-    background-color: black;
+    font-size: 20px;
+    background-color:  #5a0dad;
     color: white;
-    padding: 30px;
+    padding: 20px;
     display: block;
-    margin: 0 auto;
     cursor: pointer;
     border: none;
-    border-radius: 30px;
-
+    margin-right: 20px;
+    margin-left: 110px;
 }
 .headline{
     text-align: center;
@@ -152,7 +149,7 @@ h2{
   padding: 50px 20px 20px;
 }
 .footer img{
-    width: 150px;
+    width: 300px;
     position: relative;
     bottom: 60px;
 }
@@ -214,8 +211,17 @@ h2{
   padding-top: 15px;
   font-size: 14px;
 }
+.mobile-menu{
+  display: none;
+}
+.mobileHeadline{
+  display: none;
+}
 
 @media(max-width: 768px){
+  .banner{
+    display: none;
+  }
     header{
      background-size:130%;
       width: 100%;
@@ -252,13 +258,32 @@ h2{
     .feature-item{
         gap: 40px;
     }
-
+    .mobile-menu{
+      display: block;
+    }
+    .mobile-menu img{
+      width: 350px;
+      position: relative;
+      bottom: 10px;
+    }
+    .mobile-menu ul {
+      display: none;
+    }
     .mobile-menu.active{
-      background: blue;
-      padding: 300px;
-      margin-left:100px;
+      background: #230a3b;
+      width: 100%;
       height: 100vh;
       position:fixed;
+      top: 0px;
+    }
+    .mobile-menu.active ul{
+      display: block;
+      text-decoration: none;
+      list-style: none;
+      font-size: 30px;
+    }
+    .mobile-menu.active li{
+      
     }
     .menu-toggle{
       display: block;
@@ -273,8 +298,28 @@ h2{
 .mobile-menu.active{
   right: 0; /* slides in */
 }
+.mobileHeadline{
+  display: block;
+}
+.mobileHeadline h1{
+  text-align: left;
+  margin-left: 20px;
+  font-size: 50px;
+}
+.highlight{
+  color:#5a0dad;
+}
+.text{
+  margin-left: 20px;
+}
+.mobileHeadline .cta{
+  margin-left: 20px;
+}
       .footer-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .headline{
+    margin-top: 30px;
   }
 }
 
